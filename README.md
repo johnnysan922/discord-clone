@@ -8,7 +8,7 @@ A clone of Discord's webpage
   - `npx create-react-app discord-clone --template redux`
 - Firebase
   - Deployment
-    - Config files obtained in 'Project settings on Firebase website.
+    - Config files obtained in 'Project settings' on Firebase website.
 - Material UI
   - `npm install @mui/material @emotion/react @emotion/styled`
   - `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
