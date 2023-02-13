@@ -13,5 +13,7 @@ A clone of Discord's webpage
   - `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
 
 ## Front-end dependencies
+- `npm install npm install @mui/material @emotion/react @emotion/styled`
+- `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
 
 ## Back-end dependecies
