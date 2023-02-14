@@ -84,11 +84,10 @@ function Sidebar() {
         </div>
 
         <div className="sidebar_profile">
-            <Avatar onClick={() => auth.signOut()} src={user.photo} />
+            <Avatar src={user.photo} onClick={() => auth.signOut()} />
             <div className="sidebar_profileInfo">
                 <h3>{user.displayName}</h3>
-                {/* FIRST 5 CHAR'S OF UID */}
-                <p>#{user.uid.substring(0,5)}</p>   
+                <p>#{user.uid.substring(0,5)}</p>  {/* FIRST 5 CHAR'S OF UID */}
             </div>
 
             <div className="sidebar_profileIcons">

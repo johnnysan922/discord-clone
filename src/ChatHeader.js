@@ -5,13 +5,13 @@ import EditLocationIcon from '@mui/icons-material/EditLocation'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import { HelpRounded, SearchRounded, SendRounded } from '@mui/icons-material'
 
-function ChatHeader() {
+function ChatHeader({channelName}) {
   return (
     <div className='chatHeader'>
         <div className="chatHeader_left">
             <h3>
                 <span className='chatHeader_hash'>#</span>
-                TEST CHANNEL NAME
+                {channelName}
             </h3>
         </div>
 
