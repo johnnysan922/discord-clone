@@ -1,6 +1,8 @@
 # Discord Clone
 
-A clone of Discord's webpage build using React with Redux
+A clone of Discord's webpage build using React with Redux.
+
+Building this project I learned that using Redux, I can wrap a data layer(slices) around an application in order to pull data/information from any component in the application. This makes the code easier to maintain and prevents having to pass 'props' into various components in order to retrieve data, which can make the codebase harder to read.
 
 ## Utilized
 
