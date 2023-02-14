@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Sidebar.css'
 import AddIcon from '@mui/icons-material/Add';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -12,10 +12,32 @@ import HeadsetIcon from '@mui/icons-material/Headset';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
-import { auth } from './firebase';
+import db, { auth } from './firebase';
 
 function Sidebar() {
     const user = useSelector(selectUser);
+    const [channels, setChannels] = useState([]);       //EMPTY ARRAY BY DEFAULT
+
+    useEffect(() => {
+        db.collection('channels').onSnapshot(snapshot => (
+            setChannels(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    channel: doc.data(),
+                }))
+            )
+        ))
+    }, []);
+
+    const handleAddChannel = () => {
+        const channelName = prompt("Enter a channel name");
+
+        if(channelName){            //if 'channelName' exists; it will exist when a user inputs a name
+            db.collection("channels").add({     //adds 'channelName' to "channels" collection in Firebase
+                channelName: channelName,
+            });
+        }
+    };
 
   return (
     <div className='sidebar'>
@@ -33,12 +55,13 @@ function Sidebar() {
                     <h4>Text Channels</h4>
                 </div>
 
-                <AddIcon className='sidebar_addChannel'/>
+                <AddIcon onClick={handleAddChannel} className='sidebar_addChannel'/>
             </div>
 
             <div className='sidebar_channelsList'>
-                <SidebarChannel />
-                <SidebarChannel />
+                {channels.map(( {id, channel}) => (    //DISPLAYS EVERY COMPONENT IN DATABASE
+                    <SidebarChannel key={id} id={id} channelName={channel.channelName} />
+                ))}
             </div>
 
         </div>        
