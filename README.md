@@ -15,6 +15,8 @@ A clone of Discord's webpage build using React with Redux
       - Click `Start in **test mode**`
       - Any location is fine for `Cloud Firestore location`
       - Go to `Authentication`, enable `Google` and enter an email for `Project support email`
+      - Install firebase using `npm i firebase`
+      - Create a `firebase.js` file in the `src` folder, copy/paste the `firebaseConfig` code in the file and declare **standard** variables and **exports**
     - To prevent **Firestore from expiring in a month**, go to `Firestore Database` > `Rules` and modify the code to the following: 
     ```
     rules_version = '2';
@@ -33,5 +35,6 @@ A clone of Discord's webpage build using React with Redux
 ## Front-end dependencies
 - `npm install npm install @mui/material @emotion/react @emotion/styled`
 - `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
+- `npm install firebase`
 
 ## Back-end dependecies
