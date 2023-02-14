@@ -21,7 +21,7 @@ function ChatHeader({channelName}) {
             <PeopleAltIcon />
 
             <div className="chatHeader_search">
-                <input placeholderSearch />
+                <input placeholder='Search' />
                 <SearchRounded />
             </div>
 
