@@ -60,7 +60,11 @@ function Sidebar() {
 
             <div className='sidebar_channelsList'>
                 {channels.map(( {id, channel}) => (    //DISPLAYS EVERY COMPONENT IN DATABASE
-                    <SidebarChannel key={id} id={id} channelName={channel.channelName} />
+                    <SidebarChannel 
+                        key={id} 
+                        id={id} 
+                        channelName={channel.channelName} 
+                    />
                 ))}
             </div>
 
