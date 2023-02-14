@@ -1,11 +1,14 @@
 import { Button } from '@mui/material'
+import { auth, provider } from './firebase'       //LOCAL FIREBASE
 import React from 'react'
 import './Login.css'
 
 function Login() {
     const signIn = event => {
-        //GOOGLE LOGIN
-    }
+        //GOOGLE POPUP LOGIN
+        auth.signInWithPopup(provider)
+        .catch(error => alert(error.message));
+    };
 
   return (
     <div className='login'>
