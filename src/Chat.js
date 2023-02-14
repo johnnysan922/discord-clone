@@ -14,6 +14,7 @@ function Chat() {
 
         <div className="chat_messages">
             <Message />
+            <Message />
         </div>
 
         <div className="chat_input">
