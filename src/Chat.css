@@ -8,6 +8,11 @@
 
 .chat_messages{
     flex: 1;        /* TAKES UP THE REMAINDER OF SPACE */
+    overflow: scroll;
+}
+
+.chat_messages::-webkit-scrollbar{
+    display: none;
 }
 
 .chat_input{
