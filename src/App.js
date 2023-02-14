@@ -12,7 +12,8 @@ function App() {
       <Sidebar />
 
       {/* CHAT COMPONENT*/}
-
+      <Chat />
+      
     </div>
   );
 }
