@@ -43,7 +43,7 @@ function Sidebar() {
     <div className='sidebar'>
 
         <div className='sidebar_top'>
-            <h3>Server</h3>
+            <h3>Johnny's Server</h3>
             <ExpandMoreIcon />
         </div>
 
