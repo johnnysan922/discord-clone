@@ -1,4 +1,4 @@
-# Discord Clone (https://discord-clone-1795a.web.app/)
+# Discord Clone
 
 A clone of Discord's webpage build using React with Redux.
 
