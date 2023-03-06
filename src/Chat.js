@@ -56,7 +56,7 @@ function Chat() {
         <ChatHeader channelName={channelName} />
 
         <div className="chat_messages">
-            {messages.map((message) => (       //For EVERY message, render out a message component (IN REVERSE)
+            {messages.slice().reverse().map((message) => (       //For EVERY message, render out a message component (IN REVERSE)
                 <Message 
                     timestamp={message.timestamp}
                     message={message.message}
