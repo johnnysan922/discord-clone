@@ -18,6 +18,12 @@ function Chat() {
     const channelName = useSelector(selectChannelName);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
+    /* messages is a GLOBAL variable, even though this function is local and everything inside
+    is short lived. setMessages UPDATES the internal global variable meaning anywhere inside
+    this function, you can update the variable and see the new results even if the componenet refreshes
+    
+    EVERY STATE UPDATE, the component REFRESHES
+    */
 
     useEffect(() => {
         if(channelId){
@@ -50,7 +56,7 @@ function Chat() {
         <ChatHeader channelName={channelName} />
 
         <div className="chat_messages">
-            {messages.map((message) => (       //For EVERY message, render out a message component
+            {messages.slice().reverse().map((message) => (       //For EVERY message, render out a message component (IN REVERSE)
                 <Message 
                     timestamp={message.timestamp}
                     message={message.message}
