@@ -73,7 +73,7 @@ function Chat() {
                 value={input}
                 disabled={!channelId} // IF CHANNEL HASNT BEEN SELECTED
                 onChange={(event) => setInput(event.target.value)}
-                placeholder={`Message #${channelName}`} 
+                placeholder={channelId? `Message #${channelName}` : 'Select a text channel'} 
                 />
                 <button 
                 disabled={!channelId}
